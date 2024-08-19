@@ -1,0 +1,79 @@
+
+.calendar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 40vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(184, 182, 182, 0.19);
+    background-color: white;
+}
+
+/* MiuiCalendar.css */
+.miui-calendar-container {
+  width: 320px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.miui-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.miui-nav-button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.miui-calendar-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.miui-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.miui-day-name {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.miui-day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.miui-day:hover {
+  background-color: #f0f0f0;
+}
+
+.miui-other-month {
+  color: #ccc;
+}
+
+.miui-today {
+  background-color: #007aff;
+  color: white;
+}

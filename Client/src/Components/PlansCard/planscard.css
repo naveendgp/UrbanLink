@@ -1,0 +1,56 @@
+
+.PlansCard-container{
+    display: flex;
+    width: 50vw;
+    height: 15vh;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.construction-logo{
+    width: 10vh;
+    height: 10vh;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.construction-name{
+    margin-top: 5vh;
+    margin-left: 10vh;
+}
+
+.construction-name h3{  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.construction-location{
+    margin-top: 5vh;
+    margin-left: 10vh;
+}
+
+.construction-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 7vw;
+    height: 4vh;
+    margin-top: 5vh;
+    margin-left: 10vh;
+    border-radius: 5px;
+}
+
+.active{
+    background-color: blue;
+}
+
+.completed{
+    background-color: rgb(45, 192, 67);
+}
+
+.Fail{
+    background-color: red;
+}

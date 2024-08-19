@@ -1,0 +1,39 @@
+.ProjectCount-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-top: 2vh;
+    gap: 1.5ch; 
+    width: 55vh; 
+}
+
+.RoadCount,
+.PipeCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    height: 23vh;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
+
+}    
+
+.RoadCount {
+    grid-column: 1; 
+}
+
+.PipeCount {
+    grid-column: 2; 
+}
+
+.TotalCount {
+    display: flex;
+    grid-column: 1 / span 2; 
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
+    height: 23vh; 
+}

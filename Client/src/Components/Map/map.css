@@ -1,6 +1,11 @@
 
 .Map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50vw;
     height: 40vh;
-    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(184, 182, 182, 0.19);
+    background-color: white;
 }
