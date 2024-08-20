@@ -53,7 +53,7 @@
 }
 
 .submit-button {
-  width: 100%;
+  width: 50vh;
   padding: 12px;
   background-color: #009688;
   border: none;
@@ -61,6 +61,7 @@
   font-size: 16px;
   color: white;
   cursor: pointer;
+  margin-left: 25vh;
   transition: background-color 0.3s ease;
 }
 

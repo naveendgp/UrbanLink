@@ -9,3 +9,26 @@
     box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(184, 182, 182, 0.19);
     background-color: white;
 }
+
+.PlanMap{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.PlanMap-container{
+    height: 46.5vh;
+    width: 23.5vw;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.leaflet-routing-container {
+  display: none;
+}
+
+.projectDetails{
+    margin-top: 3vh;
+    font-size: 20px;
+    height: fit-content;
+}

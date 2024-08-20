@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import "./inputform.css";
+import axios from "axios";
 
-const ProjectForm = () => {
+const InputForm = () => {
   const [formData, setFormData] = useState({
-    projectName: "",
-    startDate: "",
-    endDate:"",
-    duration: "",
-    location: "",
-    agencyName:'',
-    department:"",
-    Description:""
+    ProjectName: "",
+    StartDate: "",
+    EndDate: "",
+    Budget: "",
+    Latitude: "",
+    Longitude: "",
+    ToLatitude: "",
+    ToLongitude: "",
+    AgencyName: "",
+    Department: "",
+    Description: "",
   });
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,9 +28,21 @@ const ProjectForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/input",
+        formData
+      );
+      console.log("Data Saved", response.data);
+      setSuccessMessage("Project details saved successfully!");
+      setErrorMessage("");
+    } catch (err) {
+      console.log("Error saving data:", err);
+      setErrorMessage("Failed to save project details.");
+      setSuccessMessage("");
+    }
     console.log("Form Data:", formData);
   };
 
@@ -32,26 +51,29 @@ const ProjectForm = () => {
       <form className="form" onSubmit={handleSubmit}>
         <h2 className="form-title">Project Details</h2>
 
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {successMessage && <p className="success-message">{successMessage}</p>}
+
         <div className="form-group1 group-right">
           <div className="form-group">
-            <label htmlFor="projectName">Project Name</label>
+            <label htmlFor="ProjectName">Project Name</label>
             <input
               type="text"
-              id="projectName"
-              name="projectName"
-              value={formData.projectName}
+              id="ProjectName"
+              name="ProjectName"
+              value={formData.ProjectName}
               onChange={handleChange}
               required
             />
           </div>
 
           <div className="form-group group-left">
-            <label htmlFor="duration">Agency Name</label>
+            <label htmlFor="AgencyName">Agency Name</label>
             <input
               type="text"
-              id="duration"
-              name="duration"
-              value={formData.agencyName}
+              id="AgencyName"
+              name="AgencyName"
+              value={formData.AgencyName}
               onChange={handleChange}
               required
             />
@@ -60,24 +82,24 @@ const ProjectForm = () => {
 
         <div className="form-group1">
           <div className="form-group group-right">
-            <label htmlFor="duration">Department</label>
+            <label htmlFor="Department">Department</label>
             <input
               type="text"
-              id="duration"
-              name="duration"
-              value={formData.department}
+              id="Department"
+              name="Department"
+              value={formData.Department}
               onChange={handleChange}
               required
             />
           </div>
 
           <div className="form-group group-left">
-            <label htmlFor="duration">Budget</label>
+            <label htmlFor="Budget">Budget</label>
             <input
               type="text"
-              id="duration"
-              name="duration"
-              value={formData.duration}
+              id="Budget"
+              name="Budget"
+              value={formData.Budget}
               onChange={handleChange}
               required
             />
@@ -86,24 +108,24 @@ const ProjectForm = () => {
 
         <div className="form-group1">
           <div className="form-group group-right date-container">
-            <label htmlFor="date">Start Date</label>
+            <label htmlFor="StartDate">Start Date</label>
             <input
               type="date"
-              id="date"
-              name="startDate"
-              value={formData.startDate}
+              id="StartDate"
+              name="StartDate"
+              value={formData.StartDate}
               onChange={handleChange}
               required
             />
           </div>
 
           <div className="form-group group-left date-container date-left">
-            <label htmlFor="date">End Date</label>
+            <label htmlFor="EndDate">End Date</label>
             <input
               type="date"
-              id="date"
-              name="endDate"
-              value={formData.endDate}
+              id="EndDate"
+              name="EndDate"
+              value={formData.EndDate}
               onChange={handleChange}
               required
             />
@@ -112,40 +134,67 @@ const ProjectForm = () => {
 
         <div className="form-group1">
           <div className="form-group group-right">
-            <label htmlFor="duration">Latitude</label>
+            <label htmlFor="Latitude1">Latitude 1</label>
             <input
               type="text"
-              id="duration"
-              name="duration"
-              value={formData.department}
+              id="FromLatitude"
+              name="FromLatitude"
+              value={formData.Latitude}
               onChange={handleChange}
               required
             />
           </div>
 
           <div className="form-group group-left">
-            <label htmlFor="duration">Longitude</label>
+            <label htmlFor="Longitude1">Longitude 1</label>
             <input
               type="text"
-              id="duration"
-              name="duration"
-              value={formData.duration}
+              id="Longitude"
+              name="Longitude"
+              value={formData.Longitude}
               onChange={handleChange}
               required
             />
           </div>
         </div>
 
-       
+        <div className="form-group1">
+          <div className="form-group group-right">
+            <label htmlFor="Latitude2">Latitude 2</label>
+            <input
+              type="text"
+              id="ToLatitude"
+              name="ToLatitude"
+              value={formData.ToLatitude}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group group-left">
+            <label htmlFor="Longitude2">Longitude 2</label>
+            <input
+              type="text"
+              id="ToLongitude"
+              name="ToLongitude"
+              value={formData.ToLongitude}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
         <div className="form-group">
-          <label htmlFor="location" style={{marginLeft:"15vh"}}>Description</label>
+          <label htmlFor="Description" style={{ marginLeft: "15vh" }}>
+            Description
+          </label>
           <input
             type="text"
-            id="location"
+            id="Description"
             className="Description"
-            name="location"
+            name="Description"
             value={formData.Description}
-            style={{width:"35vw",marginLeft:"15vh",height:"10vh"}}
+            style={{ width: "35vw", marginLeft: "15vh", height: "10vh" }}
             onChange={handleChange}
             required
           />
@@ -159,4 +208,4 @@ const ProjectForm = () => {
   );
 };
 
-export default ProjectForm;
+export default InputForm;

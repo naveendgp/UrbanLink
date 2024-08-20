@@ -54,3 +54,13 @@
 .Fail{
     background-color: red;
 }
+
+.view{
+    width: 10vh;
+    height: 5vh;
+    margin-left: 2vh;
+    margin-top: 4.5vh;
+    border-radius: 10px;
+    border: none;
+}
+

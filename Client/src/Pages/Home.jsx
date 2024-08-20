@@ -6,9 +6,14 @@ import PlansCard from '../Components/PlansCard/PlansCard';
 import ProjectCount from '../Components/ProjectCount/ProjectCount';
 import { useNavigate } from 'react-router-dom';
 
+
 const Home = () => {
 
   const navigate = useNavigate()
+
+  const handleDetail = () => {
+    navigate("/details");
+  };
   return (
     <div className="Home">
       <h1 className="homeHead">Home</h1>
@@ -23,7 +28,7 @@ const Home = () => {
         </div>
 
         <div className="calendar-grid">
-          <Calendars />
+          <Calendars/>
         </div>
       </div>
 
@@ -34,7 +39,7 @@ const Home = () => {
       </div>
       <div className="plans-group">
         <div className="Plans-grid">
-          <PlansCard constructionname={"Pipe Construction"} status={"Ongoing"}/>
+          <PlansCard constructionname={"Pipe Construction"} status={"Ongoing"} onClick={handleDetail}/>
           <PlansCard constructionname={"Road Construction"} status={"Ongoing"}/>
           <PlansCard constructionname={"Road Construction"} status={"Completed"}/>
         </div>
