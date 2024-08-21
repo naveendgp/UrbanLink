@@ -51,6 +51,7 @@
   width: 50vw;
   min-height: 50vh;
   flex-direction: column;
+  gap: 1.5ch;
   justify-content: space-between;
   margin-bottom: 20vh;
   margin-top: 5vh;
@@ -177,6 +178,10 @@
 }
 
 .Locations{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 40vh;
   margin-top: 3vh;
 }
@@ -184,3 +189,14 @@
 .Locations p{
   margin-bottom: 20px;
 }
+
+.MapContainer{
+    margin: 10px;
+    width: 23vw;
+    height: 22vh;
+    border-radius: 5px;
+    padding:5px;
+    border: 1px solid #B6B6B6;
+}
+
+.

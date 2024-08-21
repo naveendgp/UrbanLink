@@ -137,8 +137,8 @@ const InputForm = () => {
             <label htmlFor="Latitude1">Latitude 1</label>
             <input
               type="text"
-              id="FromLatitude"
-              name="FromLatitude"
+              id="Latitude"
+              name="Latitude"
               value={formData.Latitude}
               onChange={handleChange}
               required
@@ -158,31 +158,9 @@ const InputForm = () => {
           </div>
         </div>
 
-        <div className="form-group1">
-          <div className="form-group group-right">
-            <label htmlFor="Latitude2">Latitude 2</label>
-            <input
-              type="text"
-              id="ToLatitude"
-              name="ToLatitude"
-              value={formData.ToLatitude}
-              onChange={handleChange}
-              required
-            />
-          </div>
+        
 
-          <div className="form-group group-left">
-            <label htmlFor="Longitude2">Longitude 2</label>
-            <input
-              type="text"
-              id="ToLongitude"
-              name="ToLongitude"
-              value={formData.ToLongitude}
-              onChange={handleChange}
-              required
-            />
-          </div>
-        </div>
+          
 
         <div className="form-group">
           <label htmlFor="Description" style={{ marginLeft: "15vh" }}>
