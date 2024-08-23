@@ -1,8 +1,17 @@
 import PlanMap from "../Components/Map/PlanMap";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DetailedReport = () => {
+
+  const navigate = useNavigate()
+
+  const handleDetail = () => {
+    navigate("/compareProject");
+  };
+
+
   const Location = useLocation();
   const data = Location.state?.data;
   console.log("useLocation", data);
@@ -159,7 +168,7 @@ const DetailedReport = () => {
               />
             </div>
           </div>
-          <div className="Report-MapCordinates">
+          <div className="Report-MapCordinates" style={{ height: "30vh" }}>
             <p style={{ marginTop: "10px" }}>Map Details</p>
 
             <div className="Locations">
@@ -167,6 +176,12 @@ const DetailedReport = () => {
               <p>Ends In: Vijayamangalam</p>
               <p>Distance Covered: {distance.toFixed(2)}km</p>
             </div>
+            <button
+              className="compare-btn"
+              onClick={() => navigate("/CompareProject")}
+            >
+              Compare Project
+            </button>
           </div>
         </div>
       </div>

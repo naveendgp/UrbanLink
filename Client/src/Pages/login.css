@@ -1,0 +1,73 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  width: 120vh;
+  height: 70vh;
+  margin-top: 15vh;
+  margin-left: 40vh;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  border: 1px solid #bebebe;
+}
+
+.InputField {
+  width: 35vh;
+  padding: 13px;
+  border-radius: 5px;
+  background-color: #eeecec;
+  margin-left: 15px;
+  border: 1px solid #bebebe;
+  outline: none;
+}
+
+.InputField:focus {
+  border: 1px solid #bebebe;
+  outline: none;
+}
+
+.faculty-name {
+  margin-top: 7vh;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.InputField:hover {
+  outline: none;
+  border: 1px solid #bebebe;
+}
+
+.Fields {
+  margin-left: 40vh;
+  margin-top: 10vh;
+}
+
+.login-btn {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 37vh;
+  margin-top: 5vh;
+  margin-left: 3vh;
+}

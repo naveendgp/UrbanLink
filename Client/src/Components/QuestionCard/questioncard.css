@@ -1,0 +1,80 @@
+.QuestionCard-Container{
+    display: flex;
+    width: 90vh;
+    min-height: 20vh;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
+}
+
+.Userdetails{
+    display: flex;
+    width: 35vh;
+    height: 10vh;
+    margin-left: 3vh;
+    margin-top: 3vh;
+}
+
+.Userdetails h3{
+    margin-left: 4vh;
+    margin-top:1vh;
+    font-size: 16px;
+}
+
+.questionCard-userImg{
+    height: 50px;
+    width: 50px;
+    margin-left: 1px;
+    margin-top: 2px; 
+}
+
+.Userdetails aside p{
+    margin-left: 3.7vh;
+    margin-top: .5vh;
+    font-size: 14px;
+    color: #a7a3a3;
+}
+
+.Userdetails span{
+    margin-right: .5vh;
+}
+
+.ForumQuestion{
+    margin-left: 5vh;
+}
+
+.EngageContainer{
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 5vh;
+    width: 30vh;
+    height: 5vh;
+    margin-bottom: 3vh;
+}
+
+.like-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid #b8b9bb;
+}
+
+.like-container p{
+    margin-left: 1.5vh;
+    font-size: 15px;
+}
+
+.like{
+    width: 4vh;
+    height: 4vh;
+}
+
+.left{
+    margin-left: 3vh;
+}
+

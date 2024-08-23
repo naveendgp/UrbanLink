@@ -25,7 +25,6 @@
   height: 55vh;
   width: 93vw;
   justify-content: space-between;
-  margin-left: 10vh;
   margin-top: 4vh;
   flex-direction: row;
 }
@@ -33,7 +32,6 @@
 .ongoing-plans{
   width: 35vw;
   flex: 1;
-  margin-left: 2vh;
   font-size: 30px;
 }
 
@@ -55,7 +53,6 @@
   justify-content: space-between;
   margin-bottom: 20vh;
   margin-top: 5vh;
-  margin-left: 10vh;
   padding: 15px;
 }
 
@@ -199,4 +196,173 @@
     border: 1px solid #B6B6B6;
 }
 
-.
+/* Compare project */
+
+.Compare-Project{
+  background-color: #F5F7FA;
+  margin: 10px;
+  gap: 1ch;
+}
+
+.compare-btn{
+  width: 20vh;
+  padding: 12px;
+  background-color: #009688;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-left: 2vh;
+  transition: background-color 0.3s ease;
+}
+
+.Login {
+  display: flex;
+  width: 120vh;
+  height: 70vh;
+  margin-top: 15vh;
+  margin-left: 40vh;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #bebebe;
+}
+
+.Fields {
+  margin-left: 40vh;
+  margin-top: 10vh;
+}
+
+.login-btn {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 37vh;
+  margin-top: 5vh;
+  margin-left: 3vh;
+}
+
+/* Disussion Forum */
+
+.DiscussionForum-Container{
+  display: flex;
+  width: 100% ;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.DiscussionForum-main {
+  position: relative;
+  min-width: 90vh;
+  padding: 10px;
+  height: 90vh;
+  margin-left: 50vh;
+  margin-top: 5vh;
+  border-radius: 10px;
+}
+
+.QuestionAndReplies {
+  height: calc(100% - 50px); /* Adjust height based on input field height */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  padding-bottom: 10px; /* Ensure space at bottom for smooth scrolling */
+}
+
+.QuestionAndReplies::-webkit-scrollbar{
+  display:none
+}
+
+.TextInput {
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+  width: 86.5vh;
+  margin-left: 3vh;
+}
+
+.TextInput input{
+  width: 80vh;
+  height: 6vh;
+  padding: 0px 20px 0px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #5f5c5c;
+}
+
+.DiscussionForum-main::-webkit-scrollbar {
+  display: none;
+}
+
+.DiscussionForum-main {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+
+.DiscussionForum-MembersCard{
+  width: 50vh;
+  height: 80vh;
+  margin-top: 10vh;
+}
+
+/* Forum */
+
+.Forum-Container{
+  display: flex;
+  height:100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F0FCFC;
+}
+
+.Forum-Container-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50vh;
+  margin-top: 13vh;
+  width: 100vh;
+  height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
+}
+
+.Forum-types-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width:60vh;
+  height: 5vh;
+  margin-top: 6vh;
+}
+
+.Forum-type{
+    display: flex;
+    min-width: 10vh;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(118, 115, 115);
+    padding: 7px 15px 10px 7px;
+    border-radius: 10px;
+}

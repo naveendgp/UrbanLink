@@ -1,0 +1,38 @@
+.MembersCard-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  width: 50vh;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 80vh;
+  box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2),
+    0 6px 20px 0 rgba(126, 125, 125, 0.19);
+  border-radius: 10px;
+}
+
+.MembersCard-container h3{
+    margin-top: 3vh;
+    font-size: larger;
+}
+
+.Members-list{
+    display: flex;
+    align-items: center;
+    width: 35vh;
+    height: 8.5vh;
+    margin-top: 3vh;
+    border-radius: 10px;
+    border: 1px solid rgb(139, 136, 136);
+}
+
+.user-img{
+    height: 50px;
+    width: 50px;
+    margin-left: 2vh;
+}
+
+.Members-list aside{
+    margin-left: 3vh;
+    margin-bottom:3vh;
+}
