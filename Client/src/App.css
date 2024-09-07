@@ -6,6 +6,7 @@
 }
 #root{
     background-color: #F0FCFC;
+    overflow-x: hidden;
 }
 .Home{
   display: flex;
@@ -23,7 +24,7 @@
 .utils-grid{
   display: flex;
   height: 55vh;
-  width: 93vw;
+  width: 75vw;
   justify-content: space-between;
   margin-top: 4vh;
   flex-direction: row;
@@ -79,6 +80,11 @@
 
 /* Detailed Report */
 
+.ProjectDetailsContainer{
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
 
 .Detailed-ReportContainer{
     display: flex;
@@ -86,11 +92,18 @@
     justify-content: center;
 }
 
+.projectHead{
+  text-align: center;
+  font-size: 25px;
+}
 
 .Report-Container{
-    margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vh;
     width: 50vw;
-    height: 80vh;
+    height: 85vh;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
@@ -99,8 +112,8 @@
 .Report-Map{
   width: 25vw;
   height: 50vh;
-  margin-left: 15vh;
-  margin-top: 10vh;
+  margin-top: 2vh;
+  margin-left: 4vh;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
@@ -108,8 +121,8 @@
 
 .Report-MapCordinates{
   width: 25vw;
-  height: 26vh;
-  margin-left: 15vh;
+  min-height: 26vh;
+  margin-left: 4vh;
   margin-top: 3vh;
   border-radius: 10px;
   background-color: white;
@@ -120,7 +133,6 @@
   display: flex;
   align-items: center;
   margin-top: 5vh;
-  margin-left: 5vh;
   width: 45vw;
   border-radius: 10px;
   height: 20vh;
@@ -146,27 +158,27 @@
 
 .ConstructionInfo-Container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
   width: 45vw;
   height: 40vh;
+  padding: 30px;
   border: 1px solid #B6B6B6;
   border-radius: 10px;
-  margin-left: 5vh;
   margin-top: 10vh;
 }
 
-.construction-group1{
+.Construction-group1{
   display: flex;
-  margin-top: 4vh;
-  height: 6vh;
-  width: 35vw;
+  flex-direction: column;
+  padding: 10px;
+  flex: 1;
+  
 }
 
-.construction-group1 p{
-  margin-top: 1vh;
+.Construction-group2{
+  padding: 10px;
+  flex: 1;
 }
-
 .Report-MapCordinates{
   display: flex;
   align-items: center;
@@ -196,10 +208,28 @@
     border: 1px solid #B6B6B6;
 }
 
+.projectDetails{
+    margin-top: 3vh;
+    font-size: 20px;
+    height: fit-content;
+    margin-top: 5px;
+}
+
+.Details-bg{
+  width: 20vh;
+  color: white;
+  background-color: #319795;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+
+.Details-bg p{
+  margin-left: 15px;
+}
 /* Compare project */
 
 .Compare-Project{
-  background-color: #F5F7FA;
   margin: 10px;
   gap: 1ch;
 }
@@ -273,12 +303,13 @@
 }
 
 .DiscussionForum-main {
+  overflow-y: hidden;
   position: relative;
   min-width: 90vh;
   padding: 10px;
   height: 90vh;
-  margin-left: 50vh;
-  margin-top: 5vh;
+  margin-left: 5vh;
+  margin-top: 3vh;
   border-radius: 10px;
 }
 
@@ -298,8 +329,9 @@
   position: sticky;
   bottom: 0;
   padding: 10px;
-  width: 86.5vh;
+  width: 86vh;
   margin-left: 3vh;
+  background-color: transparent;
 }
 
 .TextInput input{
@@ -333,19 +365,17 @@
   display: flex;
   height:100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #F0FCFC;
 }
 
 .Forum-Container-main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 50vh;
+  margin-left: 30vh;
   margin-top: 13vh;
   width: 100vh;
   height: 85vh;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
 }
 
 .Forum-types-container{
@@ -362,7 +392,63 @@
     min-width: 10vh;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(118, 115, 115);
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
     padding: 7px 15px 10px 7px;
     border-radius: 10px;
 }
+
+
+
+.inter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #319795;
+  color: white;
+}
+
+.intra{
+  background-color: #024885;
+  color: white;
+}
+
+.public{
+  background-color: #2b065b;
+  color: white;
+}
+
+.EngageContainer{
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 5vh;
+    width: 30vh;
+    height: 5vh;
+    margin-bottom: 3vh;
+}
+
+.like-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 5vh;
+    border-radius: 5px;
+    border: 1px solid #b8b9bb;
+}
+
+.like-container p{
+    margin-left: 1.5vh;
+    font-size: 15px;
+}
+
+.like{
+    width: 4vh;
+    height: 4vh;
+}
+
+.left{
+    margin-left: 3vh;
+}
+

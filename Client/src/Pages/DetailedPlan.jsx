@@ -1,16 +1,15 @@
 import PlanMap from "../Components/Map/PlanMap";
+import company from "../assets/company.png";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const DetailedReport = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleDetail = () => {
     navigate("/compareProject");
   };
-
 
   const Location = useLocation();
   const data = Location.state?.data;
@@ -39,7 +38,7 @@ const DetailedReport = () => {
   const LatNum = Number(data.Latitude);
   const LonNum = Number(data.Longitude);
 
-  const FindDistance = (LatNum,LonNum,Lat2,Lon2) => {
+  const FindDistance = (LatNum, LonNum, Lat2, Lon2) => {
     const R = 6371; // Radius of the Earth in kilometers
     const lat1 = LatNum;
     const lon1 = LonNum;
@@ -93,95 +92,106 @@ const DetailedReport = () => {
   const formattedEndDate = `${day1} ${month1} ${year1}`;
   return (
     <>
-      <div className="Detailed-ReportContainer">
-        <h3 className="projectDetails">Project Details</h3>
-        <div className="Report-Container">
-          <div className="Agency-Container">
-            <div className="profile-container ">
-              <img className="agency-logo" alt="" />
-              <div
-                className="agencyInfo"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginLeft: "3vh",
-                  marginTop: "10px",
-                }}
-              >
-                <h3 className="agencyName">Agency Name</h3>
-                <h3
-                  className="agencyName"
-                  style={{ marginTop: "10px", color: "#BFBFBF" }}
-                >
-                  {data.AgencyName}
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div className="ConstructionInfo-Container">
-            <div className="construction-group1">
-              <div style={{ flex: "1" }}>
-                <h3>Project Name</h3>
-                <p>{data.ProjectName}</p>
-              </div>
-
-              <div>
-                <h3>Project Name</h3>
-                <p>Road Construction Project</p>
-              </div>
-            </div>
-
-            <div className="construction-group1">
-              <div style={{ flex: "1" }}>
-                <h3>Department Name</h3>
-                <p>{data.Department}</p>
-              </div>
-
-              <div style={{ marginRight: "9vh" }}>
-                <h3>Project Budget</h3>
-                <p>{data.Budget}</p>
-              </div>
-            </div>
-
-            <div className="construction-group1">
-              <div style={{ flex: "1" }}>
-                <h3>Start Date</h3>
-                <p>{formattedStartDate}</p>
-              </div>
-
-              <div style={{ marginRight: "11vh" }}>
-                <h3>End Date</h3>
-                <p>14 March 2024</p>
-              </div>
-            </div>
-          </div>
+      <div className="ProjectDetailsContainer">
+        <div className="projectHead">
+          <h3>Project Details</h3>
         </div>
 
-        <div className="Report-MapContainer">
-          <div className="Report-Map">
-            <div style={{ marginTop: "1vh" }}>
-              <PlanMap
-                latitude={11.27761}
-                Longitude={77.58347}
-                start={[LatNum, LonNum]}
-                end={[11.239526, 77.502297]}
-              />
+        <div className="Detailed-ReportContainer">
+          <div className="Report-Container">
+            <div className="Agency-Container">
+              <div className="profile-container ">
+                <img className="agency-logo" alt="" />
+
+                <div
+                  className="agencyInfo"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    marginLeft: "3vh",
+                    marginTop: "10px",
+                  }}
+                >
+                  <h3 className="agencyName">Agency Name</h3>
+                  <h3
+                    className="agencyName"
+                    style={{ marginTop: "10px", color: "#BFBFBF" }}
+                  >
+                    {data.AgencyName}
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="ConstructionInfo-Container">
+              <div className="Construction-group1">
+                <div className="Detail-bg-container">
+                  <h3 className="Details-bg">Project Name</h3>
+                  <p style={{ marginLeft: "10px" }}>
+                    Road Construction Project
+                  </p>
+                </div>
+
+                <div style={{ marginTop: "3vh" }}>
+                  <h3 className="Details-bg" style={{ width: "23vh" }}>
+                    Department Name
+                  </h3>
+                  <p style={{ marginLeft: "10px" }}>{data.Department}</p>
+                </div>
+
+                <div style={{ marginTop: "3vh" }}>
+                  <h3 className="Details-bg">Start Date</h3>
+                  <p style={{ marginLeft: "10px" }}>{formattedStartDate}</p>
+                </div>
+              </div>
+
+              <div className="Construction-group2">
+                <div>
+                  <h3 className="Details-bg">Project Name</h3>
+                  <p style={{ marginLeft: "10px" }}>
+                    Road Construction Project
+                  </p>
+                </div>
+
+                <div style={{ marginTop: "3vh" }}>
+                  <h3 className="Details-bg">Project Budget</h3>
+                  <p style={{ marginLeft: "10px" }}>{data.Budget}</p>
+                </div>
+
+                <div style={{ marginTop: "3vh" }}>
+                  <h3 className="Details-bg">End Date</h3>
+                  <p style={{ marginLeft: "10px" }}>14 March 2024</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="Report-MapCordinates" style={{ height: "30vh" }}>
-            <p style={{ marginTop: "10px" }}>Map Details</p>
 
-            <div className="Locations">
-              <p>Starts From: {place[0]}</p>
-              <p>Ends In: Vijayamangalam</p>
-              <p>Distance Covered: {distance.toFixed(2)}km</p>
+          <div className="Report-MapContainer">
+            <div className="Report-Map">
+              <div style={{ marginTop: "1vh" }}>
+                <PlanMap
+                  latitude={11.27761}
+                  Longitude={77.58347}
+                  start={[LatNum, LonNum]}
+                  end={[11.239526, 77.502297]}
+                />
+              </div>
             </div>
-            <button
-              className="compare-btn"
-              onClick={() => navigate("/CompareProject")}
-            >
-              Compare Project
-            </button>
+            <div className="Report-MapCordinates" style={{ height: "30vh" }}>
+              <p style={{ marginTop: "10px" }}>Map Details</p>
+
+              <div className="Locations">
+                <p>Starts From: {place[0]}</p>
+                <p>Ends In: Vijayamangalam</p>
+                <p>Distance Covered: {distance.toFixed(2)}km</p>
+              </div>
+              <button
+                className="compare-btn"
+                onClick={() => navigate("/CompareProject")}
+              >
+                Compare Project
+              </button>
+            </div>
           </div>
         </div>
       </div>

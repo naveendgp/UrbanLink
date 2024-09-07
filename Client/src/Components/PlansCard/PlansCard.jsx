@@ -18,7 +18,7 @@ const PlansCard = ({constructionname,status,onClick}) => {
         </div>
         <div className="construction-location">Perundurai</div>
         <div className="construction-status completed">{status}</div>
-        <button className=" view" onClick={onClick}>View</button>
+        <button className="view" onClick={onClick}>View</button>
       </div>
     </>
   );

@@ -44,17 +44,17 @@ const Home = () => {
           <Graph />
         </div>
 
-        <div className="calendar-grid">
+        {/* Calendar */}
+
+        {/* <div className="calendar-grid">
           <Calendars />
-        </div>
+        </div> */}
       </div>
 
       <div className="project-title">
         <h3 className="ongoing-plans">Ongoing Plans</h3>
         <h3 className="project-count">Projects Count</h3>
-        <button className="project-btn" onClick={() => navigate("/inputform")}>
-          New Plan
-        </button>
+      
       </div>
       <div className="plans-group">
         <div className="Plans-grid">

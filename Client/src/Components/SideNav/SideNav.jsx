@@ -17,8 +17,9 @@ import {
 import {
   FiHome,
   FiTrendingUp,
-  FiCompass,
-  FiStar,
+  FiCalendar,
+  FiFileText,
+  FiClock,
   FiMenu,
 } from "react-icons/fi";
 
@@ -40,7 +41,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           fontWeight="bold"
           color="white"
         >
-          My App
+          UrbanLink
         </Text>
         <CloseButton
           display={{ base: "flex", md: "none" }}
@@ -52,14 +53,18 @@ const SidebarContent = ({ onClose, ...rest }) => {
         <NavItem icon={FiHome} to="/">
           Home
         </NavItem>
-        <NavItem icon={FiTrendingUp} to="/trending">
-          Trending
+        <NavItem icon={FiTrendingUp} to="/newplan">
+          NewPlan
         </NavItem>
-        <NavItem icon={FiCompass} to="/explore">
-          Explore
+        <NavItem icon={FiCalendar} to="/scheduleplan">
+          Schedule Plan
         </NavItem>
-        <NavItem icon={FiStar} to="/favorites">
-          Favorites
+
+        <NavItem icon={FiFileText} to="/Discussionforum">
+          Forum
+        </NavItem>
+        <NavItem icon={FiClock} to="/appointmentform">
+          Appointment
         </NavItem>
       </VStack>
     </Box>

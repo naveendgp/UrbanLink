@@ -2,15 +2,23 @@
 .ForumCard-container{
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-top: 2vh;
     width: 80vh;
     height: 12vh;
+    background-color: white;
     border-radius: 10px;
-    border: 1px solid rgb(118, 115, 115);
+    box-shadow: 0 4px 8px 0 rgba(164, 164, 164, 0.2), 0 6px 20px 0 rgba(126, 125, 125, 0.19);
+
+}
+
+.ForumCard-container h2{
+    margin-left: 20vh;
 }
 
 .Forum-list{
     margin-top: 5vh;
 }
 
+.tab-left{
+    margin-left: 8vh;
+}

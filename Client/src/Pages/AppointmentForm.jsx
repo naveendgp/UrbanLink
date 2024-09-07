@@ -59,8 +59,8 @@ const AppointmentForm = () => {
 
   return (
     <Box
-      maxW="md"
-      mx="auto"
+      maxW="90vh"
+      mx="35vh"
       mt={10}
       p={8}
       borderWidth={1}

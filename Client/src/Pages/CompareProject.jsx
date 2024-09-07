@@ -113,7 +113,7 @@ const CompareProject = () => {
             <div className="Locations">
               <p>Starts From:Vijayamangalam</p>
               <p>Ends In: Tirupur</p>
-              <p>Distance Covered: </p>
+              <p>Distance Covered:14.8km </p>
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ const CompareProject = () => {
             <div className="Locations">
               <p>Starts From: Vijayamangalam</p>
               <p>Ends In: Tirupur</p>
-              <p>Distance Covered: </p>
+              <p>Distance Covered:15.8km </p>
             </div>
 
           </div>
